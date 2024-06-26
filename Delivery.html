@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Automatic Order Tracking</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+<style>
+
+    body {
+         font-family: Arial, sans-serif;
+        background-color:#FFFFFF;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .container {
+    position: fixed;
+    top: -10px; /* Adjust the top value as needed */
+    left: 10px; /* Adjust the left value as needed */
+    background-color: #FFFFFF;
+    padding: 10px;
+
+ 
+  }
+
+    h1 {
+        color: #333;
+    }
+
+    input[type="text"] {
+        padding: 5px;
+        margin-right: 10px;
+        margin-top: 80px;
+    }
+
+    button {
+        padding: 5px 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    .slider {
+        max-width: 80%;
+        margin: 20px auto;
+        overflow: hidden;
+    }
+
+    .slides {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+        min-width: 100%;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        }
+        
+        .fab {
+          color:#000000;
+          background:#9199EC;
+          
+        }
+                
+
+</style>
+</head>
+<body> 
+<div class="container">
+  <h1><a href="index.html"><i class="fas fa-arrow-left"></i></a>&nbsp<i class="fas fa-shipping-fast"></i> Track My ORDER</h1>
+</div>
+<input type="text" id="trackingNumber" placeholder="Enter your order tracking number" onkeydown="if(event.keyCode==13) trackOrder()">
+<button onclick="trackOrder()">Track<i class="fas fa-chevron-right"></i></button>
+
+<div class="slider">
+    <div class="slides">
+        <div class="slide"><img src="https://www.shutterstock.com/image-vector/fast-shipping-delivery-truck-flat-600nw-353170508.jpg" alt="Delivery Truck Icon" class="delivery-image" alt="Image 1"></div>
+        <div class="slide"><img src="https://scontent.fdur3-1.fna.fbcdn.net/v/t39.30808-6/441876847_1026015909102652_631702010483295815_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeElGIIqmLe_F0vbT8k8Jbjv3L7u6RLrYtfcvu7pEuti161vTiF23qugIol0db7nfAH7yqGRPh-PZ5o23V9ruNqF&_nc_ohc=NkbUbwWCtmAQ7kNvgFBrzAH&_nc_pt=5&_nc_zt=23&_nc_ht=scontent.fdur3-1.fna&oh=00_AfAdGhrVhCaCYXsdJIBk_F91AAKXp4pRvjhAXEiRy-4v7Q&oe=663FB8FC" alt="Image 2"></div>
+
+        <div class="slide"><img src="https://scontent-jnb2-1.xx.fbcdn.net/v/t39.30808-6/418904676_958685625835681_3265346567856245434_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeE6DC83jbKNXL7HKDURVfHKGoTx8jLg9OsahPHyMuD06z_QoK14xffMOl1ef8LQftwFzkCK8xcbkAAOvhc3eoRA&_nc_ohc=m9cXByVB4G0Q7kNvgHfYfjD&_nc_pt=5&_nc_zt=23&_nc_ht=scontent-jnb2-1.xx&oh=00_AfBPShl9U98PHbKurtYzcy_VwxVizNEPOKOM7i9-4hts9g&oe=66427B13" alt="Image 3"></div>
+
+    </div>
+</div>
+<div>
+    <h2>Shipping information</h2>
+    <p>Your order will be shipped within 1-2 business days. For tracking information, please enter your tracking number above.</p>
+</div>
+<h2 id="delivery-section">Delivery</h2>
+    <p>We offer safe delivery to all cities across South Africa. All our prints are securely packaged with love and care.</p>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var deliverySection = document.getElementById('delivery-section');
+        if (deliverySection) {
+            deliverySection.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+</script>
+<div>
+<a href="My-address.html"><button>Submit Address<i class="fas fa-chevron-right"></i></button></a> 
+    <h2>Returns</h2>
+    <p>
+Returns and exchanges are not supported .Personalized items are made just for you.Prior to shipping, you may request pictures from an agent for verification purposes. Thank you for your understanding.</p>
+</div>
+      <!-- Follow -->
+            <section class="follow">
+        <p>Follow fum.studio</p>
+        <a href="https://facebook.com">
+     <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://twitter.com">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://linkedin.com">
+        <i class="fab fa-youtube"></i>
+        </a>
+     <a href="https://facebook.com">
+     <i class="fab fa-facebook"></i>
+     
+        </a>
+      </section>
+          <div class ="copyright">
+ <p>Copyright © 2020-2024 Fum.studio All Right Reserved</p>
+    </div>
+</footer>
+
+
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+<script>
+function trackOrder() {
+    var trackingNumber = document.getElementById("trackingNumber").value;
+    if (trackingNumber) {
+        var url = 'https://mydsv.com/new/tracking/track-shipment?query=' + trackingNumber;
+        window.location.href = url;
+    }
+}
+function slideImages() {
+    const slides = document.querySelector('.slides');
+    const firstSlide = slides.firstElementChild;
+    slides.appendChild(firstSlide);
+}
+setInterval(slideImages, 3000);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Search</title>
+</head>
+<style>
+  /* CSS styles */
+  #productList a {
+    color: gray; /* Set the color of the links to gray */
+    text-decoration: none; /* Remove underline from links */
+  }
+</style>
+<body>
+<h1>Search</h1>
+<input type="text" id="searchInput" placeholder="Search for product....">
+<button id="searchButton">search</button>
+<ul id="productList"></ul>
+
+<script>
+const products = [
+  { name: "Key holders", link: "product1.html" },
+  { name: "Bracelet", link: "loadingbracelet1.html" },
+  { name: "Product 3", link: "product3.html" }
+  // Add more products here
+];
+
+const searchInput = document.getElementById('searchInput');
+const searchButton = document.getElementById('searchButton');
+const productList = document.getElementById('productList');
+
+function displayProducts(productsArray) {
+  productList.innerHTML = "";
+  productsArray.forEach(product => {
+    const li = document.createElement('li');
+    const link = document.createElement('a');
+    link.textContent = product.name;
+    link.href = product.link;
+    link.target = "_blank"; // Open link in a new tab
+    li.appendChild(link);
+    productList.appendChild(li);
+  });
+}
+
+function searchProducts(query) {
+  const filteredProducts = products.filter(product =>
+    product.name.toLowerCase().includes(query.toLowerCase())
+  );
+  displayProducts(filteredProducts);
+}
+
+searchInput.addEventListener('input', () => {
+  searchProducts(searchInput.value);
+});
+
+searchButton.addEventListener('click', () => {
+  searchProducts(searchInput.value);
+});
+</script>
+</body>
+</html>

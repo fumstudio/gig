@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Catalog</title
+  <link rel="stylesheet" href="/style.css
+    ">
+    
+      <link rel="stylesheet" href="css/catalog.css
+    ">
+        <link href="https://fonts.google.com/share?selection.family=Jersey+25|Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background:#7482E5;
+        
+    }
+    
+    .container {
+        max-width: 1000px;
+        margin: 1px auto;
+        background: #FFFFFF;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 2px;
+        display:  flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+   
+    }
+    
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+    
+.product {
+    width: 40%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 0px;
+    
+}
+    .product img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+    
+    .product h2 {
+        margin-top: 0px;
+        font-size: 1.2em;
+        color: #A3138A;
+    }
+    
+    .product p {
+        color: #F9FFF8;
+    }
+
+    .product-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1px;
+    }
+
+    .price {
+        color: #13A319;
+        font-weight: bold;
+    }
+
+    . shipping {
+        color: #25A313; /* Green color for free shipping */
+    }
+
+    .customize-btn {
+        background-color: #3498db;
+        color: #fff;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    
+  .space {
+margin-top: 20px;
+    }
+    p.spacex {
+  margin-top: 5px;
+  color:#000000;
+
+}
+
+  .centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:130px;
+   
+  }
+  
+
+.label-with-margin {
+    margin-top: 60px;
+  }
+    .fixed-container {
+        position: fixed;
+    }
+    
+.Black{
+  color: #0E0E0E;
+}
+
+    @media (min-width: 768px) {
+        .product {
+            width: 30%; /* Show 3 items in a row on desktop */
+        }
+    }
+
+</style>
+</head>
+<body>
+
+<!-- partial -->
+  
+ 
+ 
+ 
+ <div class="menu-btn">
+    <i class="fas fa-bars fa-2x"></i>
+  </div>
+
+<div class="container">
+    <!-- Nav -->
+    <nav class="main-nav">
+          <h1 alt="Microsoft" class="logo">Fum.studio</h1>
+      
+
+         <ul class="main-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="Necklace.html">Products</a></li>
+           <li><a href="#">My Address</a></li
+                      <li><a href="#">Payments</a></li>
+        <li><a href="Shipping.html">Shipping</a></li>
+        <li><a href="#">Support</a></li>
+                <li><a href="#">About</a></li>
+       
+        
+      
+      </ul>
+
+      <ul class="right-menu">
+        <li>
+          <a href="Search.html">
+            <i class="fas fa-search"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+<div class="container" style="position: fixed;">
+    <div class="label-with-margin">
+        <label for="filter-product">
+            <h2 class="Black">Product</h2>
+        </label>
+        <select id="filter-product" onchange="filterProducts();">
+            <option value="all">All</option>
+            <option value="necklace">Necklace</option>
+            <option value="bracelets">Bracelet</option>
+            <option value="earrings">Earrings</option>
+          <option value="calendars">Calendars</option>
+        </select>
+    </div></div>
+
+      <p class ="spacex">Gifts for friends, suitable for festivals.
+
+
+
+<div class="centered">
+<div class="container">
+  <div class="product" data-category="necklace">
+    <a href ="Necklace-loading.html">   <img src="img/N5.jpg">
+        <h2>Jewelry Necklace</h2>
+        <p>Draw attention to the Neckline.</p>
+        <div class="product-info">
+            <p class="price">R229.99</p>
+            <p class="shipping">Free Shipping</p>
+        </div>
+
+    </div></a>
+         <div class="product" data-category="bracelets">
+    <a href ="loadingbracelet1.html">   <img src="img/Bracelet 2.jpg">   
+        <h2> Starry memories Bracelet</h2>
+        <p>Your Wrist's Best Friend</p>
+        <div class="product-info">
+            <p class="price">R180.99</p>
+            <p class="shipping">Free Shipping</p>
+        </div>
+
+    </div></a>
+             <div class="product" data-category="bracelets">
+    <a href ="loadingbracelet1.html">   <img src="img/Bracelet 2.jpg">   
+        <h2> Love Memories Bracelet </h2>
+        <p>Your Wrist's Best Friend</p>
+        <div class="product-info">
+            <p class="price">R189.99</p>
+            <p class="shipping">Free Shipping</p>
+        </div>
+
+    </div></a>
+          <div class="product" data-category="necklace">
+    <a href ="Steel-necklace2,5-loading.html">   <img src="img/N5.jpg">
+        <h2>Steel Necklace</h2>
+        <p>Complete your outfit .</p
+        <div class="product-info">
+            <p class="price">R229.99</p>
+            <p class="shipping">Free Shipping</p>
+        </div>
+
+    </div></a>
+                 <div class="product" data-category="bracelets">
+    <a href ="loadingbracelet1.html">   <img src="img/Bracelet 2.jpg">   
+        <h2> Leaves Memories Bracelet </h2>
+        <p>Your Wrist's Best Friend</p>
+        <div class="product-info">
+            <p class="price">R199.99</p>
+            <p class="shipping">Free Shipping</p>
+        </div>
+
+    </div></a>
+       <div class="product" data-category="calendars">
+        <img src="https://scontent-jnb2-1.xx.fbcdn.net/v/t39.30808-6/418904676_958685625835681_3265346567856245434_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeE6DC83jbKNXL7HKDURVfHKGoTx8jLg9OsahPHyMuD06z_QoK14xffMOl1ef8LQftwFzkCK8xcbkAAOvhc3eoRA&_nc_ohc=m9cXByVB4G0Q7kNvgHfYfjD&_nc_pt=5&_nc_zt=23&_nc_ht=scontent-jnb2-1.xx&oh=00_AfBPShl9U98PHbKurtYzcy_VwxVizNEPOKOM7i9-4hts9g&oe=66427B13" alt="Jewelry">
+        <h2>2024 Calendar</h2>
+        <p>Display pictures of love ones.</p>
+        <div class="product-info">
+            <p class="price">R229.99</p>
+            <p class="shipping">Free Shipping</p>
+        </div>
+        
+    </div>
+  
+            <div class="product">
+        <img src="Img/IMG_1670.jpg" alt="Round circle">
+        <h2 >Round Circle keyholder</h2>
+        <p>Draw attention to the Neckline.</p>
+        <div class="product-info">
+            <p class="price">R229.99</p>
+            <p class="shipping">Free Shipping</p>
+        </div>
+
+    </div>
+            <div class="product">
+        <img src="Img/Rectangle.jpg" alt="Jewelry">
+        <h2>Round Circle keyholder</h2>
+        <p>Draw attention to the Neckline.</p>
+        <div class="product-info">
+            <p class="price">R229.99</p>
+            <p class="shipping">Free Shipping</p>
+        </div>
+     <a href="fumsta.html" class="customize-btn">
+  Customize
+</a>
+    </div>
+            <div class="product">
+        <img src="Img/calendar.jpg" alt="Jewelry">
+        <h2>2024 Calendar</h2>
+        <p>Display pictures of love ones.</p>
+        <div class="product-info">
+            <p class="price">R229.99</p>
+            <p class="shipping">Free Shipping</p>
+        </div>
+     <a href="fumsta.html" class="customize-btn">
+  Customize
+</a>
+    </div>
+</div>
+ 
+ <script>
+  function filterProducts() {
+    let filter = document.getElementById('filter-product').value;
+    let products = document.querySelectorAll('.product');
+    
+    products.forEach(product => {
+      let category = product.getAttribute('data-category');
+      
+      if (filter === 'all' || filter === category) {
+        product.style.display = 'block';
+      } else {
+        product.style.display = 'none';
+      }
+    });
+  }
+  
+</script>
+ <script src="js/main.js"></script>
+ 
+ </body>
+</html>
